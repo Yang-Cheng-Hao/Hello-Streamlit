@@ -30,15 +30,15 @@ with st.sidebar:
 # 3. 主頁面：問候與互動特效 (Logic Layer)
 # ==========================================
 st.title("✨ 雲端 Python 互動展示")
-visitor = st.text_input("老師/委員您好，請輸入您的姓名：", placeholder="例如：林阿宏委員 或 王小明老師")
+visitor = st.text_input("老師/委員您好，請輸入您的姓名：", placeholder="例如：劉小華教授 或 郭小城老師")
 
 if visitor:
-    # 關鍵字偵測：包含「委員」或「老師」時觸發氣球特效
+    # 關鍵字偵測：包含「教授」或「老師」時觸發氣球特效
     if "委員" in visitor or "老師" in visitor:
         st.balloons() # 觸發氣球噴發特效
         st.success(f"### 歡迎 {visitor} 蒞臨指導！ 👋")
     else:
         st.write(f"### Hello, {visitor}! 😊")
-        st.info("提示：輸入包含「委員」或「老師」可觸發隱藏特效！")
+        st.info("提示：輸入包含「教授」或「老師」可觸發隱藏特效！")
 else:
     st.info("💡 請在上方輸入框輸入姓名，啟動 Python 的互動邏輯！")
